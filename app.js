@@ -32,9 +32,9 @@ server.get('/api/searchloc/:id', async (req, res) => {
       }
     };
     axios.request(options).then(function (response) {
-      res.send(response.data);
+        res.send(response.data);
     }).catch(function (error) {
-      res.status(500).send(error);
+        res.status(500);r);
     });
 });
 
@@ -48,9 +48,9 @@ server.get('/api/coronasmt', async (req, res) => {
       }
     };
     axios.request(options).then(function (response) {
-      res.send(response.data);
+        res.send(response.data);
     }).catch(function (error) {
-      res.status(500).send(error);
+        res.status(500);
     });
 });
 
@@ -77,7 +77,7 @@ server.get('/weather/:id', async (req, res) => {
     axios.request(options).then(function (response) {
       res.send(response.data);
     }).catch(function (error) {
-      res.status(500).send(error);
+      res.status(500);
     });
 });
 
@@ -92,7 +92,7 @@ server.get('/videos/:id', async (req, res) => {
 });
 
 server.get('/', function(req, res, next) {
-    res.status(201).send();
+    res.status(201);
 });
 
 async function loadWeatherMongodb() {
