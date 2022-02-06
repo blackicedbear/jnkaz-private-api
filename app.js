@@ -111,6 +111,7 @@ async function loadVideoMongodb() {
     return client.db('jnkaz').collection('video');
 }
 
-server.listen(8080, function() {
+const port = process.env.PORT || 5000;
+server.listen(port, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
