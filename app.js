@@ -34,7 +34,7 @@ server.get('/api/searchloc/:id', async (req, res) => {
     axios.request(options).then(function (response) {
         res.send(response.data);
     }).catch(function (error) {
-        res.status(500);r);
+        res.status(500);
     });
 });
 
